@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div id="form-container">
+      <form action="signup" method="post" class="form">
+        <h2>Create an Account</h2>
+        <input
+          type="text"
+          placeholder="Username"
+          id="_username"
+          name="_username"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          id="_password"
+          name="_password"
+          required
+        />
+        <input type="submit" value="Submit" />
+        <p>Already have an account? <a href="/login">Sign in</a></p>
+      </form>
+    </div>
+    <% if (al){ %>
+    <script defer>
+      alert("Username Sudah Ada");
+    </script>
+    <% } %>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  #form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+
+  .form {
+    width: 450px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #333;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 1px #333;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 16px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #7d857d;
+    outline: none;
+  }
+
+  input[type="submit"] {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #f0ad4e;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  a {
+    color: orange;
+  }
+</style>

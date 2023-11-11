@@ -1,0 +1,1307 @@
+<html xml:lang="id" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Kribit never gonna make you cry never gonna say goodbye"
+    />
+    <meta
+      name="keywords"
+      content="never, gonna, give, you, up, never gonna, let, you down, never gonna run, around, and, desert you, Kribit"
+    />
+    <title>Kribit - Oome</title>
+    <link
+      href="/assets/img/kfrog.ico"
+      rel="shortcut icon"
+    />
+    <link
+      href="https://mika.mikroskil.ac.id/css/8a701be.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://mika.mikroskil.ac.id/bundles/mikaglobal/css/skins/all.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://mika.mikroskil.ac.id/js/01b33d8.js"></script>
+    <script src="https://mika.mikroskil.ac.id/bundles/mikaglobal/js/html5shiv/html5shiv.js"></script>
+    <script src="https://mika.mikroskil.ac.id/bundles/mikaglobal/js/icheck.min.js"></script>
+    <script src="https://mika.mikroskil.ac.id/bundles/mikaglobal/jquery/menu/mika-menu.js"></script>
+    <script>
+      $(function () {
+        if ($("#menu-hidden").length) {
+          convertToMegaMenu("#menu-hidden", "#menu");
+          megaMenuChange();
+        }
+
+        $("#menu-hidden").slicknav({
+          label: "Mika Main Menu",
+          prependTo: ".header",
+        });
+
+        $(".form-date input").datepicker({
+          autoSize: true,
+          dateFormat: "yy-mm-dd",
+        });
+
+        $('input[type="date"]').each(function () {
+          $(this).attr("type", "text");
+          $(this).addClass("datepicker");
+        });
+
+        $(".datepicker").datepicker({
+          autoSize: true,
+          dateFormat: "yy-mm-dd",
+        });
+
+        $('input[type="time"]').each(function () {
+          $(this).attr("type", "text");
+          $(this).addClass("time");
+        });
+
+        $(".time").timepicker({
+          format: "HH:mm",
+          pickSeconds: false,
+          pick12HourFormat: false,
+        });
+        $(".level_1 > li").mouseenter(function () {
+          var w = window,
+            d = document,
+            e = d.documentElement,
+            g = d.getElementsByTagName("body")[0],
+            x = w.innerWidth || e.clientWidth || g.clientWidth,
+            y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+          var result = (y * 5) / 100;
+          if (
+            $(this).parent().height() < $(this).children(".level_2").height()
+          ) {
+            $(".mega-dropdown-menu").css(
+              "height",
+              $(this).children(".level_2").height() + result
+            );
+          } else {
+            $(this)
+              .children(".level_2")
+              .css("height", $(this).parent().height() + result);
+          }
+        });
+        $(".mega-dropdown-menu").mouseenter(function () {
+          $(this).prev().css({
+            "background-color": "white",
+            color: "#094584",
+          });
+        });
+        $(".mega-dropdown-menu").mouseleave(function () {
+          $(this).prev().css({
+            "background-color": "#094584",
+            color: "#e5e5e5",
+          });
+        });
+        $("div#menu > ul > li > .parent").mouseenter(function () {
+          $(this).css({
+            "background-color": "white",
+            color: "#094584",
+          });
+        });
+        $("div#menu > ul > li > .parent").mouseleave(function () {
+          $(this).css({
+            "background-color": "#094584",
+            color: "#e5e5e5",
+          });
+        });
+        $("div#menu ul.menu_level_1 > li").mouseenter(function () {
+          var siblingsLi = $(this).parent().children();
+          siblingsLi.removeClass("selected-li-level-1");
+          $(this).parents().eq(1).next().children().hide();
+          if ($(this).children("a").hasClass("parent")) {
+            $("ul" + $(this).attr("id")).show();
+            $(this).addClass("selected-li-level-1");
+          }
+        });
+      });
+      $(window).resize(megaMenuChange);
+    </script>
+  </head>
+
+  <body style>
+    <div class="header">
+      <div class="slicknav_menu">
+        <a
+          href="#"
+          aria-haspopup="true"
+          tabindex="0"
+          class="slicknav_btn slicknav_collapsed"
+          style="outline: none"
+          ><span class="slicknav_menutxt">Mika Main Menu</span
+          ><span class="slicknav_icon"
+            ><span class="slicknav_icon-bar"></span
+            ><span class="slicknav_icon-bar"></span
+            ><span class="slicknav_icon-bar"></span></span
+        ></a>
+        <div
+          style="display: none"
+          class="slicknav_nav slicknav_hidden"
+          aria-hidden="true"
+          role="menu"
+        >
+          <ul class="menu">
+            <li class="first">
+              <a href="/home" role="menuitem"
+                ><span><strong>Home</strong></span></a
+              >
+            </li>
+
+            <li class="current">
+              <a href="/berita/" role="menuitem"
+                ><span><strong>Berita</strong></span></a
+              >
+            </li>
+
+            <li>
+              <a href="/mahasiswa/profil" role="menuitem"
+                ><span><strong>Profil</strong></span></a
+              >
+            </li>
+
+            <li>
+              <a href="/absensi/" role="menuitem"
+                ><span><strong>Absensi</strong></span></a
+              >
+            </li>
+
+            <li>
+              <a href="/mahasiswa/mpt-gamification" role="menuitem"
+                ><span><strong>MPT</strong></span></a
+              >
+            </li>
+
+            <li class="slicknav_collapsed slicknav_parent">
+              <a
+                href="#"
+                role="menuitem"
+                aria-haspopup="true"
+                tabindex="-1"
+                class="slicknav_item slicknav_row"
+                style="outline: none"
+              >
+                <a href="#" class="parent"
+                  ><span><strong>KRS</strong></span></a
+                >
+                <span class="slicknav_arrow">►</span></a
+              >
+              <ul
+                class="menu_level_1 slicknav_hidden"
+                role="menu"
+                style="display: none"
+                aria-hidden="true"
+              >
+                <li class="first slicknav_collapsed slicknav_parent">
+                  <a
+                    href="#"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    tabindex="-1"
+                    class="slicknav_item slicknav_row"
+                    style="outline: none"
+                  >
+                    <a href="#" class="parent" tabindex="-1"
+                      ><span><strong>Isi / Edit</strong></span></a
+                    >
+                    <span class="slicknav_arrow">►</span></a
+                  >
+                  <ul
+                    class="menu_level_2 slicknav_hidden"
+                    role="menu"
+                    aria-hidden="true"
+                    style="display: none"
+                  >
+                    <li class="first">
+                      <a href="/krs/regular/" role="menuitem" tabindex="-1"
+                        ><span><strong>Regular</strong></span></a
+                      >
+                    </li>
+
+                    <li class="last">
+                      <a href="/krs/sp/" role="menuitem" tabindex="-1"
+                        ><span><strong>Semester Pendek</strong></span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="/krs/cetak-krs" role="menuitem" tabindex="-1"
+                    ><span><strong>Cetak KRS</strong></span></a
+                  >
+                </li>
+
+                <li class="last">
+                  <a href="/krs/cetak-kartu-ujian" role="menuitem" tabindex="-1"
+                    ><span><strong>Cetak Kartu Ujian</strong></span></a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="slicknav_collapsed slicknav_parent">
+              <a
+                href="#"
+                role="menuitem"
+                aria-haspopup="true"
+                tabindex="-1"
+                class="slicknav_item slicknav_row"
+                style="outline: none"
+              >
+                <a href="#" class="parent"
+                  ><span><strong>Nilai</strong></span></a
+                >
+                <span class="slicknav_arrow">►</span></a
+              >
+              <ul
+                class="menu_level_1 slicknav_hidden"
+                role="menu"
+                style="display: none"
+                aria-hidden="true"
+              >
+                <li class="first">
+                  <a href="/nilai/regular" role="menuitem" tabindex="-1"
+                    ><span><strong>Semester Regular</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a href="/nilai/sp" role="menuitem" tabindex="-1"
+                    ><span><strong>Semester Pendek</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a href="/nilai/ujian-khusus" role="menuitem" tabindex="-1"
+                    ><span><strong>Ujian Khusus</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a href="/nilai/khs" role="menuitem" tabindex="-1"
+                    ><span><strong>KHS</strong></span></a
+                  >
+                </li>
+
+                <li class="last">
+                  <a href="/nilai/transkrip" role="menuitem" tabindex="-1"
+                    ><span><strong>Transkrip Akademik</strong></span></a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="slicknav_collapsed slicknav_parent">
+              <a
+                href="#"
+                role="menuitem"
+                aria-haspopup="true"
+                tabindex="-1"
+                class="slicknav_item slicknav_row"
+                style="outline: none"
+              >
+                <a href="#" class="parent"
+                  ><span><strong>Pengajuan</strong></span></a
+                >
+                <span class="slicknav_arrow">►</span></a
+              >
+              <ul
+                class="menu_level_1 slicknav_hidden"
+                role="menu"
+                style="display: none"
+                aria-hidden="true"
+              >
+                <li class="first">
+                  <a
+                    href="/mahasiswa/administrasi-wisuda/"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Administrasi Wisuda</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/tugas-akhir/pengajuan-tugas-akhir-mahasiswa"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Tugas Akhir</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/tugas-akhir/pengajuan-ujian-akhir-mahasiswa"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Ujian Akhir</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/tugas-akhir/upload-jurnal"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span
+                      ><strong>Upload Tugas Akhir dan Jurnal</strong></span
+                    ></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/izin-kegiatan-akademik"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span
+                      ><strong
+                        >Surat Izin Kegiatan Akademik Untuk Perusahaan</strong
+                      ></span
+                    ></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/riset-perusahaan"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>SK Riset ke Perusahaan</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/sk-aktif-kuliah"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span
+                      ><strong>Surat Keterangan Aktif Kuliah</strong></span
+                    ></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/pindah-waktu-kuliah"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Pindah Waktu Kuliah</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/penundaan-kegiatan-akademik"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span
+                      ><strong
+                        >Penundaan Kegiatan Akademik (PKA) / Cuti</strong
+                      ></span
+                    ></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/koreksi-nilai"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Koreksi Nilai</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/ujian-khusus-mahasiswa"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Ujian Khusus</strong></span></a
+                  >
+                </li>
+
+                <li class="slicknav_collapsed slicknav_parent">
+                  <a
+                    href="#"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    tabindex="-1"
+                    class="slicknav_item slicknav_row"
+                    style="outline: none"
+                  >
+                    <a href="#" class="parent" tabindex="-1"
+                      ><span><strong>Ujian Susulan</strong></span></a
+                    >
+                    <span class="slicknav_arrow">►</span></a
+                  >
+                  <ul
+                    class="menu_level_2 slicknav_hidden"
+                    role="menu"
+                    aria-hidden="true"
+                    style="display: none"
+                  >
+                    <li class="first">
+                      <a
+                        href="/pengajuan/ujian-bentrok"
+                        role="menuitem"
+                        tabindex="-1"
+                        ><span><strong>Bentrok</strong></span></a
+                      >
+                    </li>
+
+                    <li class="last">
+                      <a
+                        href="/pengajuan/ujian-susulan"
+                        role="menuitem"
+                        tabindex="-1"
+                        ><span><strong>Non Bentrok</strong></span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="slicknav_collapsed slicknav_parent">
+                  <a
+                    href="#"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    tabindex="-1"
+                    class="slicknav_item slicknav_row"
+                    style="outline: none"
+                  >
+                    <a href="#" class="parent" tabindex="-1"
+                      ><span><strong>Remedial</strong></span></a
+                    >
+                    <span class="slicknav_arrow">►</span></a
+                  >
+                  <ul
+                    class="menu_level_2 slicknav_hidden"
+                    role="menu"
+                    aria-hidden="true"
+                    style="display: none"
+                  >
+                    <li class="first">
+                      <a
+                        href="/pengajuan/remedial-semester"
+                        role="menuitem"
+                        tabindex="-1"
+                        ><span><strong>Semester</strong></span></a
+                      >
+                    </li>
+
+                    <li class="last">
+                      <a
+                        href="/pengajuan/remedial-ulang"
+                        role="menuitem"
+                        tabindex="-1"
+                        ><span><strong>Ulang</strong></span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/upload-dokumen"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Upload Dokumen</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/pengajuan-pengunduran-diri"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Pengunduran Diri</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/pengajuan/daftar-surat-izin"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span
+                      ><strong>Pemrosesan Surat Sakit / Izin</strong></span
+                    ></a
+                  >
+                </li>
+
+                <li class="last">
+                  <a
+                    href="/pengajuan/potongan-uang-kuliah"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Potongan Uang Kuliah</strong></span></a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="slicknav_collapsed slicknav_parent">
+              <a
+                href="#"
+                role="menuitem"
+                aria-haspopup="true"
+                tabindex="-1"
+                class="slicknav_item slicknav_row"
+                style="outline: none"
+              >
+                <a href="#" class="parent"
+                  ><span><strong>Polling</strong></span></a
+                >
+                <span class="slicknav_arrow">►</span></a
+              >
+              <ul
+                class="menu_level_1 slicknav_hidden"
+                role="menu"
+                style="display: none"
+                aria-hidden="true"
+              >
+                <li class="first last">
+                  <a
+                    href="/mahasiswa/view-polling-mahasiswa"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Lihat Pengisian Polling</strong></span></a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="slicknav_collapsed slicknav_parent">
+              <a
+                href="#"
+                role="menuitem"
+                aria-haspopup="true"
+                tabindex="-1"
+                class="slicknav_item slicknav_row"
+                style="outline: none"
+              >
+                <a href="#" class="parent"
+                  ><span><strong>Info</strong></span></a
+                >
+                <span class="slicknav_arrow">►</span></a
+              >
+              <ul
+                class="menu_level_1 slicknav_hidden"
+                role="menu"
+                style="display: none"
+                aria-hidden="true"
+              >
+                <li class="first slicknav_collapsed slicknav_parent">
+                  <a
+                    href="#"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    tabindex="-1"
+                    class="slicknav_item slicknav_row"
+                    style="outline: none"
+                  >
+                    <a href="#" class="parent" tabindex="-1"
+                      ><span><strong>Jadwal</strong></span></a
+                    >
+                    <span class="slicknav_arrow">►</span></a
+                  >
+                  <ul
+                    class="menu_level_2 slicknav_hidden"
+                    role="menu"
+                    aria-hidden="true"
+                    style="display: none"
+                  >
+                    <li class="first">
+                      <a href="/jadwal/kuliah/" role="menuitem" tabindex="-1"
+                        ><span><strong>Kuliah</strong></span></a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="/jadwal/ujian/" role="menuitem" tabindex="-1"
+                        ><span><strong>Ujian</strong></span></a
+                      >
+                    </li>
+
+                    <li class="last">
+                      <a href="/informasi/jadwal" role="menuitem" tabindex="-1"
+                        ><span><strong>Lain - Lain</strong></span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="slicknav_collapsed slicknav_parent">
+                  <a
+                    href="#"
+                    role="menuitem"
+                    aria-haspopup="true"
+                    tabindex="-1"
+                    class="slicknav_item slicknav_row"
+                    style="outline: none"
+                  >
+                    <a href="#" class="parent" tabindex="-1"
+                      ><span><strong>Akademik</strong></span></a
+                    >
+                    <span class="slicknav_arrow">►</span></a
+                  >
+                  <ul
+                    class="menu_level_2 slicknav_hidden"
+                    role="menu"
+                    aria-hidden="true"
+                    style="display: none"
+                  >
+                    <li class="first slicknav_collapsed slicknav_parent">
+                      <a
+                        href="#"
+                        role="menuitem"
+                        aria-haspopup="true"
+                        tabindex="-1"
+                        class="slicknav_item slicknav_row"
+                        style="outline: none"
+                      >
+                        <a href="#" class="parent" tabindex="-1"
+                          ><span><strong>Prosedur</strong></span></a
+                        >
+                        <span class="slicknav_arrow">►</span></a
+                      >
+                      <ul
+                        class="menu_level_3 slicknav_hidden"
+                        role="menu"
+                        aria-hidden="true"
+                        style="display: none"
+                      >
+                        <li class="first">
+                          <a
+                            href="/informasi/prosedur-koreksi-nilai"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span><strong>Koreksi Nilai</strong></span></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-legalisir-ijazah-dan-transkrip-nilai"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Legalisir Ijazah dan Transkrip Nilai</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-lintas-jurusan"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span><strong>Lintas Jurusan</strong></span></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-penundaan-kegiatan-akademik"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Penundaan Kegiatan Akademik</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-riset-perusahaan"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pembuatan SK Riset ke Perusahaan</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-surat-izin-melakukan-kegiatan-akademik-perusahaan"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pembuatan Surat Izin Melakukan Kegiatan
+                                Akademik Perusahaan</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-surat-keterangan-asli-ijazah"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pembuatan Surat Keterangan Asli Ijazah</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-surat-pengganti-ijazah"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pembuatan Surat Pengganti Ijazah</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-ujian-bentrok-dan-ujian-susulan"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pendaftaran Ujian Bentrok dan Ujian
+                                Susulan</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-pendaftaran-wisuda"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span><strong>Pendaftaran Wisuda</strong></span></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/surat-izin-sakit"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pengajuan Pemrosesan Surat Izin / Sakit</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-pengajuan-tugas-akhir"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pengajuan Tugas Akhir / Tesis</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-surat-aktif"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pengajuan Surat Keterangan Aktif Kuliah</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-pengisian-pengeditan-dan-persetujuan-krs"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong
+                                >Pengisian, Pengeditan dan Persetujuan
+                                KRS</strong
+                              ></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-pengunduran-diri"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span><strong>Pengunduran Diri</strong></span></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-pindah-waktu-kuliah"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong>Pindah Waktu Kuliah</strong></span
+                            ></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/prosedur-ujian-akhir"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span><strong>Ujian Akhir</strong></span></a
+                          >
+                        </li>
+
+                        <li>
+                          <a
+                            href="/informasi/ujian-remedial"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span><strong>Ujian Remedial</strong></span></a
+                          >
+                        </li>
+
+                        <li class="last">
+                          <a
+                            href="/informasi/upload-dokumen-mahasiswa"
+                            role="menuitem"
+                            tabindex="-1"
+                            ><span
+                              ><strong>Upload Dokumen Mahasiswa</strong></span
+                            ></a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a
+                        href="/informasi/formulir"
+                        role="menuitem"
+                        tabindex="-1"
+                        ><span><strong>Formulir</strong></span></a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="/informasi/wisuda" role="menuitem" tabindex="-1"
+                        ><span><strong>Wisuda</strong></span></a
+                      >
+                    </li>
+
+                    <li>
+                      <a
+                        href="/informasi/kalender"
+                        role="menuitem"
+                        tabindex="-1"
+                        ><span><strong>Kalender Akademik</strong></span></a
+                      >
+                    </li>
+
+                    <li class="last">
+                      <a
+                        href="/informasi/peraturan"
+                        role="menuitem"
+                        tabindex="-1"
+                        ><span><strong>Lain - Lain</strong></span></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="/pegawai" role="menuitem" tabindex="-1"
+                    ><span><strong>Daftar Pegawai</strong></span></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="/informasi/pembayaran_uang_kuliah"
+                    role="menuitem"
+                    tabindex="-1"
+                    ><span><strong>Pembayaran Uang Kuliah</strong></span></a
+                  >
+                </li>
+
+                <li class="last">
+                  <a href="/informasi/jurnal" role="menuitem" tabindex="-1"
+                    ><span><strong>Jurnal</strong></span></a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="/tugas-akhir/pencarian" role="menuitem"
+                ><span><strong>Tugas Akhir</strong></span></a
+              >
+            </li>
+
+            <li class="last">
+              <a href="/login/out" role="menuitem"
+                ><span><strong>Logout</strong></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div id="logo">
+          <img
+            alt="Oome"
+            src="/assets/img/kfrog.png"
+          />
+        </div>
+        <div id="menu">
+          
+        </div>
+        <div id="menu-hidden" style="display: none">
+          <ul class="menu">
+            <li class="current first">
+              <a href="/home"
+                ><span><strong>Home</strong></span></a
+              >
+            </li>
+
+            <li class="last">
+              <a href="/login/out"
+                ><span><strong>Logout</strong></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="wrapper">
+        <div class="identitas-login-user">
+          <strong><%= user.name %>#<%= user.code %></strong>
+        </div>
+        <div class="mika-box news">
+          <h3>Theards</h3>
+          <div class="content-container">
+            <div class="search-container">
+              <form action="/home/" class="search" method="get" role="form">
+                <div class="form-search">
+                  <input
+                    id="filter-value"
+                    class="form-input"
+                    type="text"
+                    value=""
+                    name="filter-value"
+                    placeholder="Keyword"
+                  />
+                  <span>
+                    <button class="mika-button" type="submit">GO</button>
+                  </span>
+                </div>
+              </form>
+              <a href="/thread/upload"><button class="mika-button">Upload Thread</button></a>
+            </div>
+            <div class="news-container">
+              <% if (threads&&threads.length>0){ %> <%
+              threads.forEach(thread => { %>
+              <div class="news-item" id="<%=thread.id%>">
+                <img
+                  alt="Thread"
+                  src="/assets/img/kfrogb.png"
+                />
+                <div class="news-item-detail">
+                  <header>
+                    <h4 class="news-title">
+                        <a href="<%= thread.links_ %>"><%= thread.title %></a>
+                    </h4>
+                    <span class="kategori"><%= thread.kategori %> </span>
+                    <span class="news-date"> - <%= thread.createdAt %></span>
+                  </header>
+                  <p class="news-description">
+                    <span> </span>
+                    <a
+                      target="_blank"
+                      class="read-more"
+                      href="<%= thread.links_ %>"
+                      >baca selengkapnya</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <% })} %>
+            </div>
+            <div class="news-pagination">
+              <ul class="pagination">
+                <% if (page.current==1||page.current==0) { %>
+                <li class="prev disabled"><span>«</span></li>
+                <% } else { %>
+                <li class="prev">
+                  <a href="<%=nextp%>page=<%= page.current-1 %>" rel="prev">«</a>
+                </li>
+                <% } %> <% if (page.current==1) { %>
+                <li class="active">
+                  <span>1 <span class="sr-only">(current)</span></span>
+                </li>
+                <% } else { %>
+                <li><a href="<%=nextp%>page=1">1</a></li>
+                <% } %> <% if (page.current==2) { %>
+                <li class="active">
+                  <span>2 <span class="sr-only">(current)</span></span>
+                </li>
+                <% } else if ([1,3,4].indexOf(page.current)!=-1&&page.total>1) {
+                %>
+                <li><a href="<%=nextp%>page=2">2</a></li>
+                <% } else if(page.total>=5) { %>
+                <li class="disabled"><span>…</span></li>
+                <% } %> <% if (page.current==3) { %>
+                <li class="active">
+                  <span>3 <span class="sr-only">(current)</span></span>
+                </li>
+                <% } else if([1,2,4].indexOf(page.current)!=-1&&page.total>3){
+                %>
+                <li><a href="<%=nextp%>page=3">3</a></li>
+                <% } else if(page.current>=4&&page.total-page.current>=2){ %>
+                <li>
+                  <a href="<%=nextp%>page=<%= page.current-1 %>"
+                    ><%= page.current-1 %></a
+                  >
+                </li>
+                <% } %>%> <% if (page.current>=4&&page.total-page.current>=3) {
+                %>
+                <li class="active">
+                  <span
+                    ><%= page.current %>
+                    <span class="sr-only">(current)</span></span
+                  >
+                </li>
+                <% }%> <% if (page.total-page.current==2&&page.current>3) { %>
+                <li class="active">
+                  <span
+                    ><%= page.total-2 %>
+                    <span class="sr-only">(current)</span></span
+                  >
+                </li>
+                <% } else
+                if([0,1,2].indexOf(page.total-page.current)!=-1&&page.current>4){
+                %>
+                <li>
+                  <a href="<%=nextp%>page=<%= page.total-2 %>"
+                    ><%= page.total-2 %></a
+                  >
+                </li>
+                <% } else if(page.total-page.current>=3&&page.current>2){ %>
+                <li>
+                  <a href="<%=nextp%>page=<%= page.current+1 %>"
+                    ><%= page.current+1 %></a
+                  >
+                </li>
+                <% } %>%> <% if (page.total-page.current==1&&page.current>3) {
+                %>
+                <li class="active">
+                  <span
+                    ><%= page.total-1 %>
+                    <span class="sr-only">(current)</span></span
+                  >
+                </li>
+                <% } else if
+                ([0,3,2].indexOf(page.total-page.current)!=-1&&page.total>3&&page.total!=4)
+                { %>
+                <li><a href="<%=nextp%>page=2"><%= page.total-1 %></a></li>
+                <% } else if(page.total-page.current>=2&&page.total>3) { %>
+                <li class="disabled"><span>…</span></li>
+                <% } %> <% if
+                (page.current==page.total&&[1,2,3].indexOf(page.current)==-1) {
+                %>
+                <li class="active">
+                  <span
+                    ><%= page.total %>
+                    <span class="sr-only">(current)</span></span
+                  >
+                </li>
+                <% } else if (page.total>2&&!(page.total==3&&page.current==3)){
+                %>
+                <li>
+                  <a href="<%=nextp%>page=<%= page.total %>"
+                    ><%= page.total %></a
+                  >
+                </li>
+                <% } %> <% if (page.current==page.total||page.total==0) { %>
+                <li class="next disabled"><span>»</span></li>
+                <% } else { %>
+                <li class="next">
+                  <a href="<%=nextp%>page=<%= page.current+1 %>" rel="next">»</a>
+                </li>
+                <% } %>
+              </ul>
+            </div>
+            <div
+              class="modal fade bs-example-modal-lg in"
+              tabindex="-1"
+              role="dialog"
+              aria-hidden="true"
+              id="onload"
+              style="display: block; padding-right: 17px"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                    ></button>
+                    <h4 class="modal-title">
+                      <i class="fa fa-excalamation-circle"></i>Informasi
+                    </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-justify" id="pengu" class="pengu">
+                      <p>
+                      We're no strangers to love
+                      You know the rules and so do I
+                      A full commitment's what I'm thinking of
+                      You wouldn't get this from any other guy
+
+                      I just wanna tell you how I'm feeling
+                      Gotta make you understand
+
+                      Never gonna give you up
+                      Never gonna let you down
+                      Never gonna run around and desert you
+                      Never gonna make you cry
+                      Never gonna say goodbye
+                      Never gonna tell a lie and hurt you
+
+                      We've known each other for so long
+                      Your heart's been aching, but
+                      You're too shy to say it
+                      Inside, we both know what's been going on
+                      We know the game and we're gonna play it
+
+                      And if you ask me how I'm feeling
+                      Don't tell me you're too blind to see
+
+                      Never gonna give you up
+                      Never gonna let you down
+                      Never gonna run around and desert you
+                      Never gonna make you cry
+                      Never gonna say goodbye
+                      Never gonna tell a lie and hurt you
+
+                      Never gonna give you up
+                      Never gonna let you down
+                      Never gonna run around and desert you
+                      Never gonna make you cry
+                      Never gonna say goodbye
+                      Never gonna tell a lie and hurt you
+
+                      (Ooh, give you up)
+                      (Ooh, give you up)
+                      Never gonna give, never gonna give
+                      (Give you up)
+                      Never gonna give, never gonna give
+                      (Give you up)
+
+                      We've known each other for so long
+                      Your heart's been aching, but
+                      You're too shy to say it
+                      Inside, we both know what's been going on
+                      We know the game and we're gonna play it
+
+                      I just wanna tell you how I'm feeling
+                      Gotta make you understand
+
+                      Never gonna give you up
+                      Never gonna let you down
+                      Never gonna run around and desert you
+                      Never gonna make you cry
+                      Never gonna say goodbye
+                      Never gonna tell a lie and hurt you
+
+                      Never gonna give you up
+                      Never gonna let you down
+                      Never gonna run around and desert you
+                      Never gonna make you cry
+                      Never gonna say goodbye
+                      Never gonna tell a lie and hurt you
+
+                      Never gonna give you up
+                      Never gonna let you down
+                      Never gonna run around and desert you
+                      Never gonna make you cry
+                      Never gonna say goodbye
+                      Never gonna tell a lie and hurt you
+                      </p>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="submit"
+                      class="btn btn-default"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer style="margin-top: 0px"></footer>
+
+    <script src="https://mika.mikroskil.ac.id/js/b3d4512.js"></script>
+    <script src="https://mika.mikroskil.ac.id/bundles/mikaglobal/js/analytics.js"></script>
+
+    <script type="text/javascript">
+      $(window).on("load", function () {
+        $("#onload").modal({
+          show: 1,
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $("footer").each(function () {
+        if ($.trim($(this).html()) == "") {
+          $("footer").css("marginTop", "0");
+        }
+      });
+    </script>
+  </body>
+</html>
